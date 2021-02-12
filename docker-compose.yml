@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  opencanary:
+    build:
+      context: .
+      network: host
+    container_name: opencanary_python_buster
+    hostname: "opencanary"
+    ports:
+      - "2222:22"
+      - "8080:80"
+    volumes:
+      - ./data/root:/root
+      - ./data/log:/var/log/opencanary
+    restart: unless-stopped
