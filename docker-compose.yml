@@ -5,7 +5,7 @@ services:
     build:
       context: .
       network: host
-    container_name: opencanary_python_buster
+    container_name: opencanary
     hostname: "opencanary"
     ports:
       - "2222:22"
