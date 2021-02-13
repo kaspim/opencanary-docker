@@ -6,10 +6,11 @@ services:
       context: .
       network: host
     container_name: opencanary
-    hostname: "opencanary"
+    hostname: opencanary
     ports:
       - "22:22"
       - "80:80"
+      - "3306:3306"
     volumes:
       - ./data/root:/root
       - ./data/log:/var/log/opencanary
