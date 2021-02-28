@@ -14,4 +14,4 @@ RUN python3 -m pip install --upgrade pip \
 
 COPY ./data/root/.opencanary.conf /root/.opencanary.conf
 
-ENTRYPOINT opencanaryd --start && tail -f /dev/null
+ENTRYPOINT opencanaryd --start && tail -f -s 60 /dev/null
