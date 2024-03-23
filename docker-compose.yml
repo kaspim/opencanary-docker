@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+  docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: opencanary
+    hostname: opencanary
+    network_mode: bridge
+    ports:
+      - "21:21"
+      - "80:80"
+      - "3306:3306"
+    restart: unless-stopped
+
