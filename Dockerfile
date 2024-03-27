@@ -12,6 +12,6 @@ RUN python3 -m pip install --upgrade pip \
     && mkdir -p /var/log/opencanary \
     && touch /var/log/opencanary/opencanary.log
 
-COPY /etc/opencanaryd/opencanary.conf /etc/opencanary/opencanary.conf
+COPY /root/.opencanary.conf /root/.opencanary.conf
 
 ENTRYPOINT opencanaryd --start && tail -f -n 0 /var/log/opencanary/opencanary.log
